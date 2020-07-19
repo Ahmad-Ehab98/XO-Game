@@ -21,6 +21,7 @@ int main()
         printf("User 1 play\n");
         count += get_place(u1,xo_arr);
         print_xo_grid(xo_arr);
+        // in case user 1 wins
         if (winner(xo_arr))
         {
             printf("User 1 is the Winner!\nPlay Again? (y/n)\n");
@@ -38,6 +39,7 @@ int main()
                 continue;
             }
         }
+        // in case its a draw
         else if (count == 9 && !winner(xo_arr))
         {
             printf("Draw!\nPlay Again? (y/n)\n");
@@ -58,6 +60,7 @@ int main()
         printf("User 2 play\n");
         count += get_place(u2,xo_arr);
         print_xo_grid(xo_arr);
+        // in case user 2 wins
         if (winner(xo_arr))
         {
             printf("User 2 is the Winner!\nPlay Again? (y/n)\n");
@@ -75,6 +78,7 @@ int main()
                 continue;
             }
         }
+        // in case its a draw
         else if (count == 9 && !winner(xo_arr))
         {
             printf("Draw!\nPlay Again? (y/n)\n");
